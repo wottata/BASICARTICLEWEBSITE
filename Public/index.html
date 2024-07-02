@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iblog</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav_container">
+            <a href="index.html"><h4>Iblog</h4></a>
+            <ul class="nav_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programming.html">Programming</a></li>
+                <li><a href="cyber_security.html">Cyber Security</a></li>
+                <li><a href="computer_networking.html">Computer Networking</a></li>
+            </ul>
+            <button id="open-menu-button"><i class="uil uil-list-ul"></i></button>
+            <button id="close-button"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container header_container">
+            <div class="Header_left">
+                <h1>Welcome to Iblog</h1>
+                <p>Your source for programming, cyber security, and computer networking.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="upload">
+        <div class="container upload_container">
+            <h1>Upload Your Blog</h1>
+            <form id="uploadBlogForm" action="/upload/blog" method="POST" enctype="multipart/form-data">
+                <label for="title">Blog Title:</label>
+                <input type="text" id="title" name="title" required><br><br>
+                
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" rows="10" cols="30" required></textarea><br><br>
+                
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required><br><br>
+                
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="programming">Programming</option>
+                    <option value="cyber_security">Cyber Security</option>
+                    <option value="computer_networking">Computer Networking</option>
+                </select><br><br>
+                
+                <button type="submit" class="btn">Upload Blog</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
+
+
